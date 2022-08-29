@@ -14,7 +14,7 @@ public class Main {
         int i = 0;
         System.out.println("\nСписок книг в массиве:");
         while (books[i] != null){
-            System.out.println(i+1 + ")" + books[i].getBookName() + ":" + books[i].getAuthorName() + ":" + books[i].getPublicationYear());
+            System.out.println(i+1 + ")" + books[i].getBookName() + ":" + books[i].getAuthorName() + ": " + books[i].getPublicationYear());
             i++;
         }
     }
@@ -37,6 +37,17 @@ public class Main {
         Book book3 = new Book("Ромео и Джульетта", author3, 1597);
         addBook(book3, books);
         printAllBooks(books);
+
+
+        //Сложный уровень
+        Library library1 = new Library(10);
+        library1.addBook(book3);
+        library1.addBook(new Book("Зеленая миля", new Author("Стивен Кинг"), 1996));
+        library1.printAllBooks();
+        library1.printOneBook("Зеленая миля");
+        library1.changePublicationYear("Ромео и Джульетта", 2000);
+        library1.printOneBook("Ромео и Джульетта");
+        library1.printAllBooks();
 
 
     }
