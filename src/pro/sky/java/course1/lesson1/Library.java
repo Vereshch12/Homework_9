@@ -1,5 +1,7 @@
 package pro.sky.java.course1.lesson1;
 
+import java.util.Arrays;
+
 public class Library {
     private final Book[] books;
     private int lenghtOfBooks = 0;
@@ -40,5 +42,14 @@ public class Library {
             }
         }
         System.out.println("Такой книги нет в библиотеке");
+    }
+
+    @Override
+    public String toString() {
+        String outputStringLibrary = new String(Arrays.toString(books));
+        outputStringLibrary = outputStringLibrary.replaceAll("\\[","");
+        outputStringLibrary = outputStringLibrary.replaceAll("\\]","");
+        outputStringLibrary = outputStringLibrary.replaceAll(", ","\n");
+        return "Library:\n" + outputStringLibrary;
     }
 }
