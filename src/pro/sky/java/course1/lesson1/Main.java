@@ -1,7 +1,7 @@
 package pro.sky.java.course1.lesson1;
 
 public class Main {
-    public static void addBook(Book book, Book[] books){
+    private static void addBook(Book book, Book[] books){
         for (int i = 0; i < books.length; i++){
             if (books[i] == null){
                 books[i] = book;
@@ -10,7 +10,7 @@ public class Main {
         }
     }
 
-    public static void printAllBooks(Book[] books){
+    private static void printAllBooks(Book[] books){
         int i = 0;
         System.out.println("\nСписок книг в массиве:");
         while (books[i] != null){
