@@ -45,9 +45,16 @@ public class Main {
         library1.addBook(new Book("Зеленая миля", new Author("Стивен Кинг"), 1996));
         library1.printAllBooks();
         library1.printOneBook("Зеленая миля");
-        library1.changePublicationYear("Ромео и Джульетта", 2000);
+        library1.changePublicationYear("Ромео и Джульетт", 2000);
         library1.printOneBook("Ромео и Джульетта");
         library1.printAllBooks();
+
+
+        //ДЗ №10
+        Author author4 = new Author("Уильям Шекспир");
+        Book book4 = new Book("Ромео и Джульетта", author4, 200 );
+        System.out.println("\n" + book4.equals(book3));
+        System.out.println(author4.equals(author3));
 
 
     }
