@@ -24,7 +24,7 @@ public class Library {
 
     public void printOneBook(String nameBook){
         for (int i = 0; i < lenghtOfBooks; i++){
-            if (nameBook == books[i].getBookName()){
+            if (nameBook.equals(books[i].getBookName())){
                 System.out.println("\nКнига «" + books[i].getBookName() + "», автор - " + books[i].getAuthorName() + ", была издана в " + books[i].getPublicationYear() + " году.");
                 break;
             }
@@ -33,7 +33,7 @@ public class Library {
 
     public void changePublicationYear(String nameBook, int newYear){
         for (int i = 0; i < lenghtOfBooks; i++) {
-            if (nameBook == books[i].getBookName()) {
+            if (nameBook.equals(books[i].getBookName())) {
                 books[i].setPublicationYear(newYear);
                 break;
             }
