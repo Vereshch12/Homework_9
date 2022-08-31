@@ -29,6 +29,7 @@ public class Library {
                 break;
             }
         }
+        System.out.println("Такой книги нет в библиотеке");
     }
 
     public void changePublicationYear(String nameBook, int newYear){
@@ -38,5 +39,6 @@ public class Library {
                 break;
             }
         }
+        System.out.println("Такой книги нет в библиотеке");
     }
 }
